@@ -38,8 +38,11 @@ function inicializarFirebase() {
     }
     firebase.database().ref("pruebas/" + user.uid)
       .set(usuario) //modifica la llave
-  
+      var usuarios = localStorage.getItem('usuario');
+      console.log(JSON.parse(usuarios));
+
   }
+
   
   /* ++++++++++++ Carga pagina ++++++++++ */
   window.load = inicializar;
